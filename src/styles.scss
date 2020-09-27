@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+
+@import './themes/light-theme.scss';
+@import './themes/dark-theme.scss';
+
+@include mat-core();
+
+@mixin custom-components-theme($theme) {
+  /* utilizar include para componentes personalizados 
+  onde há necessidade de mudança no css com as 
+  váriaveis primary, accent e warn */
+}
+
+/* classe responsavel pelo tema dark */
+.dark-theme{
+  @include angular-material-theme($dark-theme);
+  @include custom-components-theme($dark-theme);
+}
+
+/* classe responsavel pelo tema light */
+.light-theme{
+  @include angular-material-theme($light-theme);
+  @include custom-components-theme($light-theme);
+}
+
+html, body { height: 100%; }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

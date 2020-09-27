@@ -126,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AngularNgrx"
+    }
+  },
+  "defaultProject": "AngularNgrx",
+  "cli": {
+    "analytics": false
+  }
 }

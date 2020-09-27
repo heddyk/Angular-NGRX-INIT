@@ -1,0 +1,30 @@
+<header>
+  <mat-toolbar>
+    <div class="header-container">
+      <div>
+        <span>HEADER</span>
+      </div>
+      <div>
+        <button mat-icon-button
+          [matMenuTriggerFor]="menu"
+          aria-label="Example icon-button with a menu">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Dark Mode</span>
+            <mat-slide-toggle checked (change)="changeTheme($event)" (click)="$event.stopPropagation();"></mat-slide-toggle>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Logout</span>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+  </mat-toolbar>
+</header>
+<div class="router-container">
+  <router-outlet></router-outlet>
+</div>
